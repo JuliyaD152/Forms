@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>JS2</title>
+    
+</head>
+<body>
+    <div>
+        <input type="text" id="simpletext"><br>
+        Add new field<input type="checkbox" id="check" value="Add"> </br>
+    </div>
+    
+    <input type="submit" value="Submit">
+    <script>
+        let form = document.getElementById("check");
+        function addelement(){
+            if( check =true){
+                form.addEventListener("click", addelem);
+                function addelem(){
+                      form.insertAdjacentHTML('afterend', '<p>Add new information <input type="text" id="maininp" value=""> </p>')};
+            }
+            else{
+                form.removeEventListener("click", addelem);    
+        }
+        }
+        addelement()
+
+          // form.addEventListener("click", addelement);
+        // function addelement(){
+        //     form.addEventListener("click", addelement);
+        //     if(form.checked){
+        //      form.insertAdjacentHTML('afterend', '<p>Add new information <input type="text" id="maininp" value=""> </p>')
+        //      } 
+        //     else{
+        //         form.removeEventListener("click", addelement)
+        //         form.remove;
+        //     }    
+        //     }
+    </script>
+</body>
+</html>
